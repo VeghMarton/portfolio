@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary1: #FFE67E;
+    --primary2: #F4CE14;
+    --primary3: #997F00;
+    --secondary1: #DBF76B;
+    --secondary2: #BEEA13;
+    --secondary3: #759300;
+    --tertiary1: #FFBE6E;
+    --tertiary2: #F48F14;
+    --tertiary3: #995400;
+    --complementer1: #7861C2;
+    --complementer2: #401FA8;
+    --complementer3: #210A69;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: var(--tertiary1);
+    color: var(--complementer3);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--tertiary2);
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 200px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--tertiary3);
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary2);
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--complementer3);
+}
+
+
+main > section:first-of-type {
+    grid-column: 1 / -1;
+    background-color: var(--primary1);
+    color: var(--complementer3);
+    text-align: center;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+main > section:first-of-type h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+main > section:first-of-type img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* 3 Columns */
+main {
+    gap: 30px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 30px;
+    overflow:auto;
+}
+
+main > section:not(:first-of-type) {
+    background-color: var(--primary1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+main > section:not(:first-of-type) h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.0em;
+    color: var(--tertiary3);
+    margin-bottom: 10px;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--tertiary2);
+    color: white;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+footer img {
+    max-width: 100px;
+    height: auto;
+}
+
+footer div:last-child {
+    font-size: 0.9em;
+}
